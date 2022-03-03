@@ -53,18 +53,6 @@ function returnSpecificRoast(){
     input = input.toLowerCase();
     var list = document.getElementsByClassName('coffee-type');
 
-    var dropdown = document.getElementById('roast-selection').value;
-    dropdown = dropdown.toLowerCase();
-    var selectRoast = document.getElementsByClassName('roast-type');
-
-    for (var i = 0; i < selectRoast.length; i++){
-        if (!selectRoast[i].innerText.toLowerCase().includes(dropdown)){
-            selectRoast[i].style.display = 'none';
-        } else {
-            selectRoast[i].style.display = 'option';
-        }
-    }
-
     for (var i = 0; i < list.length; i++){
         if (!list[i].innerText.toLowerCase().includes(input)){
             list[i].style.display = 'none';
@@ -73,6 +61,20 @@ function returnSpecificRoast(){
         }
     }
 }
+
+function returnDropDownRoast(){
+    var input = document.getElementById('roast-selection');
+    input = input.toLowerCase();
+    var selectRoast = document.getElementsByClassName('roast-type');
+
+    // for (var i = 0; i < selectRoast.length; i++){
+        if (!selectRoast.innerText.toLowerCase().includes(input)){
+            selectRoast.style.display = 'none';
+        } else {
+            selectRoast.style.display = 'option';
+        }
+    }
+// }
 
 
 
