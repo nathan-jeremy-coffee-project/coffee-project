@@ -49,9 +49,9 @@ var coffees = [
 ];
 
 function returnSpecificRoast(){
-    var input = document.getElementById('searchbar')
+    var input = document.getElementById('searchbar').value
     input = input.toLowerCase();
-    var list = document.getElementsByTagName('li');
+    var list = document.getElementsByClassName('coffee-type');
 
     for (var i = 0; i < list.length; i++){
         if (!list[i].innerText.toLowerCase().includes(input)){
