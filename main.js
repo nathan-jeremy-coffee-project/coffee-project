@@ -48,6 +48,34 @@ var coffees = [
     {id: 14, name: 'French', roast: 'dark'},
 ];
 
+function returnSpecificRoast(){
+    var input = document.getElementById('searchbar')
+    input = input.toLowerCase();
+    var list = document.getElementsByTagName('li');
+
+    for (var i = 0; i < list.length; i++){
+        if (!list[i].innerText.toLowerCase().includes(input)){
+            list[i].style.display = 'none';
+        }else{
+            list[i].style.display = 'list-item';
+        }
+    }
+}
+
+// function returnRoast(){
+//    var input = document.getElementById('submit')
+//    var coffeeRoasts = document.getElementsByClassName('roast');
+//
+//    for (var i = 0; i < coffeeRoasts.length; i++){
+//        if (!coffeeRoasts[i].innerText.includes(input)){
+//            coffeeRoasts[i].style.display = 'none'
+//        }
+//        else{
+//            coffeeRoasts[i].style.display = 'list-item';
+//        }
+//    }
+// }
+
 var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
