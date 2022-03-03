@@ -27,7 +27,27 @@
             <input id='searchbar' onkeyup="returnSpecificRoast()" type="text" name="search" placeholder="Coffee Name" a href="#">
         </div>
         <input id="submit" onclick="returnDropDownRoast()" type="submit" name="roastSelection">
+
+        <h2>Add a Coffee</h2>
+
+        <h3>Roast</h3>
+        <form>
+            <label for="roast-selection"></label>
+            <select id="roast-selection-user">
+                <option class="roast-type">all</option>
+                <option class="roast-type">light</option>
+                <option class="roast-type">medium</option>
+                <option class="roast-type">dark</option>
+            </select>
+        </form>
+
+        <h3>Name</h3>
+        <input id="user-choice" type="text">
+    <input id="user-submit" type="submit">
+
+
     </section>
+
     <section class="leftHalf">
         <div class="firstSevenCoffee">
         <ol >

@@ -74,14 +74,27 @@ main{
 #searchbar{
     width: 95%;
     height: 2em;
-    border-radius: 10px;
+    border-radius: 8px;
     border-color: lightgray;
 
 }
 
 #roast-selection{
-    width: 98%;
-    height: 2em;
-    border-radius: 10px;
+    width: 97%;
+    height: 2.5em;
+    border-radius: 7px;
     border-color: lightgray;}
 
+#user-choice{
+    width: 95%;
+    height: 2em;
+    border-radius: 8px;
+    border-color: lightgray;
+}
+
+#roast-selection-user{
+    width: 97%;
+    height: 2.5em;
+    border-radius: 7px;
+    border-color: lightgray;
+}
