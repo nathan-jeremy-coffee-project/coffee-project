@@ -65,19 +65,25 @@ function returnSpecificRoast(){
     }
 }
 
-function returnDropDownRoast(){
-    var input = document.getElementById('roast-selection');
-    input = input.toLowerCase();
-    var selectRoast = document.getElementsByClassName('roast-type');
-
-    // for (var i = 0; i < selectRoast.length; i++){
-        if (!selectRoast.innerText.toLowerCase().includes(input)){
-            selectRoast.style.display = 'none';
-        } else {
-            selectRoast.style.display = 'option';
+function filtersCoffees(coffees) {
+    var html = '';
+    for(var i = 0; i < coffees.length; ++i) {
+        if (coffees[i].roast === 'light') {
+            html += renderCoffee(coffees[i]);
         }
     }
-// }
+    for(var j = 0; j < coffees.length; ++j) {
+        if (coffees[j].roast === 'medium') {
+            html += renderCoffee(coffees[j]);
+        }
+    }
+    for(var k = 0; k < coffees.length; ++k) {
+        if (coffees[k].roast === 'dark') {
+            html += renderCoffee(coffees[k]);
+        }
+    }
+    return html;
+}
 
 
 
