@@ -1,11 +1,11 @@
 "use strict"
 
 function renderCoffee(coffee) {
-    var html = '<tr class="coffee">';
-    html += '<td>' + coffee.id + '</td>';
-    html += '<td>' + coffee.name + '</td>';
-    html += '<td>' + coffee.roast + '</td>';
-    html += '</tr>';
+    var html = '<div class="coffee">';
+
+    html += '<div>' + coffee.name + '</div>';
+    html += '<div>' + coffee.roast + '</div>';
+    html += '</div>';
 
     return html;
 }
@@ -25,6 +25,8 @@ function updateCoffees(e) {
     coffees.forEach(function(coffee) {
         if (coffee.roast === selectedRoast) {
             filteredCoffees.push(coffee);
+        } else if (selectedRoast === "all") {
+            filteredCoffees.push(coffee)
         }
     });
     tbody.innerHTML = renderCoffees(filteredCoffees);
@@ -51,6 +53,7 @@ var coffees = [
     {id: 14, name: 'French', roast: 'dark'},
 ];
 
+
 function returnSpecificRoast(){
     var input = document.getElementById('searchbar').value
     input = input.toLowerCase();
@@ -65,25 +68,25 @@ function returnSpecificRoast(){
     }
 }
 
-function filtersCoffees(coffees) {
-    var html = '';
-    for(var i = 0; i < coffees.length; ++i) {
-        if (coffees[i].roast === 'light') {
-            html += renderCoffee(coffees[i]);
-        }
-    }
-    for(var j = 0; j < coffees.length; ++j) {
-        if (coffees[j].roast === 'medium') {
-            html += renderCoffee(coffees[j]);
-        }
-    }
-    for(var k = 0; k < coffees.length; ++k) {
-        if (coffees[k].roast === 'dark') {
-            html += renderCoffee(coffees[k]);
-        }
-    }
-    return html;
-}
+// function filtersCoffees(coffees) {
+//     var html = '';
+//     for(var i = 0; i < coffees.length; ++i) {
+//         if (coffees[i].roast === 'light') {
+//             html += renderCoffee(coffees[i]);
+//         }
+//     }
+//     for(var j = 0; j < coffees.length; ++j) {
+//         if (coffees[j].roast === 'medium') {
+//             html += renderCoffee(coffees[j]);
+//         }
+//     }
+//     for(var k = 0; k < coffees.length; ++k) {
+//         if (coffees[k].roast === 'dark') {
+//             html += renderCoffee(coffees[k]);
+//         }
+//     }
+//     return html;
+// }
 
 
 
