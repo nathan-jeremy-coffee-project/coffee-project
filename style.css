@@ -8,23 +8,18 @@ td, th {
     padding: 5px 10px;
 }
 
-ol{
-    list-style-type: none;
-}
-
-li{
-    list-style-type: none;
-}
 
 h1{
     text-align: center;
+    text-decoration: underline;
+    font-style: italic;
 }
 
 hr{
     width: 90%;
 }
 body{
-    background-color: khaki;
+    background-color: #816e56;
 }
 
 main{
@@ -42,22 +37,38 @@ main{
     width: 50%;
     display: flex;
     flex-direction: row;
+    flex-wrap: nowrap;
 }
 
-.coffee-type{
-    background-color: blanchedalmond;
-    margin: 1em;
-    border: 1px solid black;
+.coffee{
+    display: flex;
+    flex-direction: row;
+    padding: 1em;
+    margin: .5em;
     border-radius: 5px;
+    align-items: start;
+    border: 1px solid saddlebrown;
+    width: 50%;
 }
 
-.coffee-type > h3{
-  padding: .5em;
+.coffeeName{
+    margin-right: .5em;
+    font-size: 1.5em;
+    width: 50%;
     color: saddlebrown;
+    font-style: oblique;
+    padding-bottom: .5em;
 }
 
-.roast{
-    padding: .5em;
+.coffeeRoast{
+    width: 50%;
+    font-size: 1em;
+    font-style: italic;
+    align-self: flex-end;
+    text-align: center;
+    padding-bottom: .5em;
+    position: relative;
+    top: 1em;
 }
 
 

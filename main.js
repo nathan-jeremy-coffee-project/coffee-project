@@ -3,8 +3,8 @@
 function renderCoffee(coffee) {
     var html = '<div class="coffee">';
 
-    html += '<div>' + coffee.name + '</div>';
-    html += '<div>' + coffee.roast + '</div>';
+    html += '<div class="coffeeName">' + coffee.name + '</div>';
+    html += '<div class="coffeeRoast">' + coffee.roast + '</div>';
     html += '</div>';
 
     return html;
@@ -53,6 +53,8 @@ var coffees = [
     {id: 14, name: 'French', roast: 'dark'},
 ];
 
+// document.getElementById(coffees).style.margin =
+
 function stringContains(string) {
     var userInput = string;
     if (userInput.toLowerCase().includes(coffees[0].name.toLowerCase())) {
@@ -62,62 +64,6 @@ function stringContains(string) {
     }
 }
 
-// if (string.includes() (coffees[0].name)){
-//     return true
-// }else{
-//     return false
-// }
-
-
-// function returnSpecificRoast(){
-//     var input = document.getElementById('searchbar').value
-//     input = input.toLowerCase();
-//     var list = document.getElementsByClassName('coffee-type');
-//
-//     for (var i = 0; i < list.length; i++){
-//         if (!list[i].innerText.toLowerCase().includes(input)){
-//             list[i].style.display = 'none';
-//         }else{
-//             list[i].style.display = 'list-item';
-//         }
-//     }
-// }
-
-// function filtersCoffees(coffees) {
-//     var html = '';
-//     for(var i = 0; i < coffees.length; ++i) {
-//         if (coffees[i].roast === 'light') {
-//             html += renderCoffee(coffees[i]);
-//         }
-//     }
-//     for(var j = 0; j < coffees.length; ++j) {
-//         if (coffees[j].roast === 'medium') {
-//             html += renderCoffee(coffees[j]);
-//         }
-//     }
-//     for(var k = 0; k < coffees.length; ++k) {
-//         if (coffees[k].roast === 'dark') {
-//             html += renderCoffee(coffees[k]);
-//         }
-//     }
-//     return html;
-// }
-
-
-
-// function returnRoast(){
-//    var input = document.getElementById('submit')
-//    var coffeeRoasts = document.getElementsByClassName('roast');
-//
-//    for (var i = 0; i < coffeeRoasts.length; i++){
-//        if (!coffeeRoasts[i].innerText.includes(input)){
-//            coffeeRoasts[i].style.display = 'none'
-//        }
-//        else{
-//            coffeeRoasts[i].style.display = 'list-item';
-//        }
-//    }
-// }
 
 var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
