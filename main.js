@@ -53,20 +53,35 @@ var coffees = [
     {id: 14, name: 'French', roast: 'dark'},
 ];
 
-
-function returnSpecificRoast(){
-    var input = document.getElementById('searchbar').value
-    input = input.toLowerCase();
-    var list = document.getElementsByClassName('coffee-type');
-
-    for (var i = 0; i < list.length; i++){
-        if (!list[i].innerText.toLowerCase().includes(input)){
-            list[i].style.display = 'none';
-        }else{
-            list[i].style.display = 'list-item';
-        }
+function stringContains(string) {
+    var userInput = string;
+    if (userInput.toLowerCase().includes(coffees[0].name.toLowerCase())) {
+        return 'It includes!'
+    } else {
+        return 'It doesnt include'
     }
 }
+
+// if (string.includes() (coffees[0].name)){
+//     return true
+// }else{
+//     return false
+// }
+
+
+// function returnSpecificRoast(){
+//     var input = document.getElementById('searchbar').value
+//     input = input.toLowerCase();
+//     var list = document.getElementsByClassName('coffee-type');
+//
+//     for (var i = 0; i < list.length; i++){
+//         if (!list[i].innerText.toLowerCase().includes(input)){
+//             list[i].style.display = 'none';
+//         }else{
+//             list[i].style.display = 'list-item';
+//         }
+//     }
+// }
 
 // function filtersCoffees(coffees) {
 //     var html = '';
